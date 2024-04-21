@@ -61,3 +61,19 @@ def main():
         # Set the viewport to cover the entire window
         glViewport(0, 0, width, height)
 
+        # Begin drawing triangles
+        glBegin(GL_TRIANGLES)
+
+        # Define the first vertex of the triangle at coordinates (0, 1)
+        glVertex2f(0, 1)
+
+        # Define the second vertex of the triangle at coordinates (-1, -1)
+        glVertex2f(-1, -1)
+
+        # Define the third vertex of the triangle at coordinates (1, -1)
+        glVertex2f(1, -1)
+
+        # End drawing triangles
+        glEnd()
+
+
