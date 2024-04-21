@@ -40,3 +40,24 @@ def setup_opengl(): #Create a funtion to setup OpenGL
     
     # Clear the color buffer with the specified clear color
     glClear(GL_COLOR_BUFFER_BIT)
+
+
+# Main function
+def main():
+    # Set up the window
+    window = window_setup()
+    # Check if the window setup failed
+    if not window:
+        return
+
+    # Main loop
+    while not glfw.window_should_close(window):
+        # Set up OpenGL
+        setup_opengl()
+        
+        # Get the size of the framebuffer
+        width, height = glfw.get_framebuffer_size(window)
+        
+        # Set the viewport to cover the entire window
+        glViewport(0, 0, width, height)
+
