@@ -14,10 +14,12 @@ def window_setup(): # Create a Function Called Window Setup.
     # If the window creation fails, it will return None.
     if not window:
         glfw.terminate()
-        return None
+        return 
 
     # Make this window the current context.
     glfw.make_context_current(window)
+
+    return window
 
 
 def setup_opengl(): #Create a funtion to setup OpenGL
@@ -76,4 +78,14 @@ def main():
         # End drawing triangles
         glEnd()
 
+         # Swap front and back buffers
+        glfw.swap_buffers(window)
 
+        # Poll for and process events
+        glfw.poll_events()
+
+    # Terminate GLFW
+    glfw.terminate()
+
+if __name__ == "__main__":
+    main()
