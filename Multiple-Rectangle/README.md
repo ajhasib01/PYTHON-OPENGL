@@ -13,6 +13,7 @@
      ```python
      import glfw
      from OpenGL.GL import *
+     import math
      ```
 
 By following these steps, you'll have the necessary libraries installed and imported, ready to start coding with GLFW and OpenGL.
